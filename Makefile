@@ -11,7 +11,7 @@ build:
 web:
 	julia --project=docs -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate(); \
 		include("docs/make.jl"); \
-		using LiveServer; servedocs(host="127.0.0.0.1"); \
+		using LiveServer; servedocs(); \
 		'
 
 test:
