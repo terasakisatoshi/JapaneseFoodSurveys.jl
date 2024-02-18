@@ -1,0 +1,27 @@
+version: '3'
+services:
+  julia:
+    image: japanesefoodsurveysjl
+    container_name: japanesefoodsurveysjl-julia
+    volumes:
+      - ./:/workspace/JapaneseFoodSurveys.jl
+    working_dir: /workspace/JapaneseFoodSurveys.jl
+    command: julia --project=/workspace/JapaneseFoodSurveys.jl
+
+  shell:
+    image: japanesefoodsurveysjl
+    container_name: japanesefoodsurveysjl-julia
+    volumes:
+      - ./:/workspace/JapaneseFoodSurveys.jl
+    working_dir: /workspace/JapaneseFoodSurveys.jl
+    command: /bin/bash
+
+  web:
+    image: japanesefoodsurveysjl
+    container_name: japanesefoodsurveysjl-packagedocs
+    volumes:
+      - ./:/workspace/JapaneseFoodSurveys.jl
+    working_dir: /workspace/JapaneseFoodSurveys.jl
+    ports:
+      - "8000:8000"
+    command: make web
