@@ -3,11 +3,20 @@ uuid = "2d06a393-0e9b-4360-953e-6c05e2bad38a"
 authors = ["Satoshi Terasaki <terasakisatoshi.math@gmail.com> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+LibGit2 = "76f85450-5226-5b5a-8eaa-529ad045b433"
+REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+
 [compat]
-julia = "1.6.7"
+julia = "1.10"
 
 [extras]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+ReTestItems = "817f1d60-ba6b-4fd5-9520-3cf149f6a823"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Aqua", "JET", "ReTestItems", "Test"]

@@ -1,7 +1,12 @@
 using JapaneseFoodSurveys
 using Documenter
 
-DocMeta.setdocmeta!(JapaneseFoodSurveys, :DocTestSetup, :(using JapaneseFoodSurveys); recursive=true)
+DocMeta.setdocmeta!(
+    JapaneseFoodSurveys,
+    :DocTestSetup,
+    :(using JapaneseFoodSurveys);
+    recursive=true,
+)
 
 makedocs(;
     modules=[JapaneseFoodSurveys],

@@ -1,6 +1,5 @@
-using JapaneseFoodSurveys
 using Test
+using ReTestItems
+using JapaneseFoodSurveys
 
-@testset "JapaneseFoodSurveys.jl" begin
-    # Write your tests here.
-end
+runtests(JapaneseFoodSurveys)
