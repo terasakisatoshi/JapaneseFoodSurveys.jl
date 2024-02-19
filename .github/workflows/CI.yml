@@ -23,6 +23,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
+          - '1'
           - 'nightly'
         os:
           - ubuntu-latest
@@ -50,6 +51,10 @@ jobs:
         with:
           version: '1'
       - uses: julia-actions/cache@v1
+      - name: Configure Fonts
+        run: |
+          sudo get update && apt-get install fontconfig
+          bash tools/fonts/download_juisee.sh
       - name: Configure doc environment
         shell: julia --project=docs --color=yes {0}
         run: |
