@@ -11,11 +11,12 @@ Documentation for [JapaneseFoodSurveys](https://github.com/terasakisatoshi/Japan
 ```@example wc_food
 using ImageShow
 using WordCloud
+using StatsBase
 
 using JapaneseFoodSurveys
-
 df = JapaneseFoodSurveys.summarize()
-wc_favorite_food = wordcloud(df.favorite_food)
+words = collect(countmap(df.favorite_food))
+wc_favorite_food = wordcloud(words, fonts=["Juisee HW:style=Regular"])
 generate!(wc_favorite_food)
 paint(wc_favorite_food, "wc_favorite_food.svg")
 ```
