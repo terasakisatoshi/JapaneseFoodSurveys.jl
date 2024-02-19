@@ -18,6 +18,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     git \
     unzip \
     wget \
+    fontconfig \
     && \
     apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* # clean up
 
