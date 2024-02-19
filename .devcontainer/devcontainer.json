@@ -28,7 +28,7 @@
   "forwardPorts": [1234, 8000, 8080, 8888],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "julia --project -e 'using Pkg; Pkg.instantiate()",
+  "postCreateCommand": "julia --project -e 'using Pkg; Pkg.instantiate()'",
 
   // Configure tool-specific properties.
   // "customizations": {},
