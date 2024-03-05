@@ -6,12 +6,6 @@ Documentation for [JapaneseFoodSurveys](https://github.com/terasakisatoshi/Japan
 ```@index
 ```
 
-```mermaid
-graph TD
-    A[mermaid.js] --> B[DocumenterMermaid]
-    B --> C[Documenter]
-```
-
 # 好きな食べ物
 
 ```@example wc_food
