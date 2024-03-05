@@ -1,5 +1,6 @@
 using JapaneseFoodSurveys
 using Documenter
+using DocumenterMermaid: DocumenterMermaid
 
 DocMeta.setdocmeta!(
     JapaneseFoodSurveys,
