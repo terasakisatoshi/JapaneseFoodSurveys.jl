@@ -5,9 +5,8 @@ on:
   workflow_dispatch:
 jobs:
   CompatHelper:
-    # permissions:
-      #pull-requests: write
-      #contents: write
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Pkg.add("CompatHelper")
