@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   CompatHelper:
-    permissions:
+    # permissions:
       #pull-requests: write
       #contents: write
     runs-on: ubuntu-latest
